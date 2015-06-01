@@ -3,13 +3,11 @@ var app = angular.module('isStreaming',[]);
 app.controller('usersController', function($scope,$http){
 
 
-	$scope.checkIfStreaming = function(link){
 
-		if($scope.link == link) return;
-		$scope.link = link;
+	$scope.checkIfStreaming = function(link){
 		
-		link = link.split('/').pop(-1)
 		console.log(link);
+		link = link.split('/').pop(-1)		
 		
 		$.ajax({
     		url: "https://api.twitch.tv/kraken/streams/" + link,
@@ -23,16 +21,16 @@ app.controller('usersController', function($scope,$http){
  
     // Work with the response
     		success: function( response ) {
-        	console.log( response ); // server response
-        	return response.stream;
-    		}
-		});
-	};
+    			if (response.stream){ return "streaming"; }
+    			else { return "not streaming"; }
+		}
+	});
+	}
 
 
 
 	$scope.users = [
-	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/abecsgo'}
+	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/goldglove'}
 	// {'name': 'adreN (Liquid)', 'link':'http://www.twitch.tv/adren_tv'},
 	// {'name': 'AdreN (HellRaisers)', 'link':'http://www.twitch.tv/adrentot'},
 	// {'name': 'Allu (NiP)', 'link':'http://www.twitch.tv/allub'},

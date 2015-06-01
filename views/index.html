@@ -32,7 +32,12 @@
 			
 			<div class="user" ng-controller='usersController'>
 				
-				<p ng-repeat='user in users' class="center"><span class="streamer"><a href={{user.link}}>{{user.name}}</a></span><span class="isStreaming" ng-show="!checkIfStreaming(user.link)">NOT STREAMING :(</span> <span class="isStreaming" ng-show="checkIfStreaming(user.link)">STREAMING</span></p>
+				<p ng-repeat='user in users' class="center" >
+				<span class="streamer"><a href={{user.link}}>{{user.name}}</a></span>
+				<!--<span class="isStreaming" ng-show="user.name"+'Streaming'>NOT STREAMING :(</span>
+				<span class="isStreaming" ng-show="user.name"+'Streaming'>STREAMING</span>-->
+				<div ng-show="streaming">{{checkIfStreaming(user.link)}}</div>
+				</p>
 
 
 			</div>
