@@ -2,6 +2,7 @@ var app = angular.module('isStreaming',[]);
 
 app.controller('usersController', function($scope,$http){
 
+	console.log('gurmukhsinghlall <3 kevin hemple');
 	$scope.users = [
 	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/abecsgo'},
 	{'name': 'adreN (Liquid)', 'link':'http://www.twitch.tv/adren_tv'},
@@ -147,10 +148,10 @@ app.controller('usersController', function($scope,$http){
  
     // Work with the response
     		success: function( response ) {
-    			console.log(link);    			
+    			//console.log(link);    			
     			if(response.stream){  
-    				console.log(response.stream);  				 
-    				console.log('streaming');
+    			//	console.log(response.stream);  				 
+    			//	console.log('streaming');
     				user.isStreaming = true;
     				$scope.$apply();
     			}
