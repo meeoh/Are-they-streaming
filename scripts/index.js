@@ -3,7 +3,7 @@ var app = angular.module('isStreaming',[]);
 app.controller('usersController', function($scope,$http){
 
 	$scope.users = [
-	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/joshog'},
+	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/hiko'},
 	{'name': 'adreN (Liquid)', 'link':'http://www.twitch.tv/adren_tv'},
 	{'name': 'AdreN (HellRaisers)', 'link':'http://www.twitch.tv/adrentot'},
 	{'name': 'Allu (NiP)', 'link':'http://www.twitch.tv/allub'},
@@ -131,13 +131,9 @@ app.controller('usersController', function($scope,$http){
 	];
 
 
-		
-		for(var i = 0; i < $scope.users.length; ++i){			
-			var link = $scope.users[i].link.split('/').pop(-1)
-			var user = $scope.users[i];		
-			var test = 1;	
-			var isStreaming = false;		
+	var apiCall = function(user){
 
+		var link = user.link.split('/').pop(-1)
 
 		$.ajax({
     		url: "https://api.twitch.tv/kraken/streams/" + link,
@@ -152,9 +148,9 @@ app.controller('usersController', function($scope,$http){
     // Work with the response
     		success: function( response ) {
     			console.log(link);    			
-    			if(response.stream){    				 
+    			if(response.stream){  
+    				console.log(response.stream);  				 
     				console.log('streaming');
-    				isStreaming = true;
     				user.isStreaming = true;
     				$scope.$apply();
     			}
@@ -162,12 +158,26 @@ app.controller('usersController', function($scope,$http){
     				isStreaming = false;
     				$scope.$apply();
     			}
-    		
 			}
 		});
-
-		//$scope.users[i].isStreaming = true;		
-		
 	};
+
+
+		
+		for(var i = 0; i < $scope.users.length; ++i){		
+			apiCall($scope.users[i]);	
+		};
 	
 });
+
+
+
+
+
+
+
+
+
+
+
+
