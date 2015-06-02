@@ -11,7 +11,7 @@ with open('streamers.txt') as f:
 		
 
 		print foo
-
+writeFile.close()
 
 
 
