@@ -4,17 +4,26 @@
 
 <head>
 
-	<link rel="stylesheet" type="text/css" href="../sources/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../scripts/index.css">		
-	<script  src="../sources/angular.min.js"></script>
-	<script  src="../scripts/jquery-2.1.3.js"></script>
-	<script  src="../scripts/index.js"></script>	
+	<link rel="stylesheet" type="text/css" href="sources/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="scripts/index.css">		
+	<script  src="sources/angular.min.js"></script>
+	<script  src="scripts/jquery-2.1.3.js"></script>
+	<script  src="scripts/index.js"></script>	
 
 
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ 		 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ 		 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 		 ga('create', 'UA-63669921-1', 'auto');
+		  ga('send', 'pageview');
+	</script>
 
 </head>
 
 <body>
+
 
 	<div class="container" >
 
@@ -31,7 +40,7 @@
 			
 			<div class="user" ng-controller='usersController'>
 				
-				<p ng-repeat='user in users' class="center" >				
+				<p ng-repeat="user in users | orderBy: ['isStreaming','name']" class="center" >				
 				<span class="streamer col-md-2 col-md-offset-2"><a href={{user.link}}>{{user.name}}</a></span>
 				<span ng-show="user.isStreaming"><a href={{user.link}}><button type="submit" class='btn btn-primary'>STREAMING</button></a></span>
 				<span ng-show="!user.isStreaming"><button class='btn btn-danger' disabled>NOT STREAMING :(</button></span>
