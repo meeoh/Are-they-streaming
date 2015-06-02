@@ -3,7 +3,7 @@ var app = angular.module('isStreaming',[]);
 app.controller('usersController', function($scope,$http){
 
 	$scope.users = [
-	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/hiko'},
+	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/abecsgo'},
 	{'name': 'adreN (Liquid)', 'link':'http://www.twitch.tv/adren_tv'},
 	{'name': 'AdreN (HellRaisers)', 'link':'http://www.twitch.tv/adrentot'},
 	{'name': 'Allu (NiP)', 'link':'http://www.twitch.tv/allub'},
