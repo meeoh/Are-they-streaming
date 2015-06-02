@@ -42,7 +42,7 @@
 				
 				<p ng-repeat="user in users | orderBy: ['isStreaming','name']" class="center" >				
 				<span class="streamer col-md-2 col-md-offset-2"><a href={{user.link}}>{{user.name}}</a></span>
-				<span ng-show="user.isStreaming"><a href={{user.link}}><button type="submit" class='btn btn-primary'>STREAMING</button></a></span>
+				<span ng-show="user.isStreaming"><a href={{user.link}}><button type="submit" class='btn btn-success'>STREAMING</button></a></span>
 				<span ng-show="!user.isStreaming"><button class='btn btn-danger' disabled>NOT STREAMING :(</button></span>
 				
 				</p>
