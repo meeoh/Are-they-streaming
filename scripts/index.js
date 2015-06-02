@@ -2,35 +2,8 @@ var app = angular.module('isStreaming',[]);
 
 app.controller('usersController', function($scope,$http){
 
-
-
-	$scope.checkIfStreaming = function(link){
-		
-		console.log(link);
-		link = link.split('/').pop(-1)		
-		
-		$.ajax({
-    		url: "https://api.twitch.tv/kraken/streams/" + link,
- 
-    		// The name of the callback parameter, as specified by the YQL service
-		    jsonp: "callback",
- 
-    		// Tell jQuery we're expecting JSONP
-    		dataType: "jsonp",
- 
- 
-    // Work with the response
-    		success: function( response ) {
-    			if (response.stream){ return "streaming"; }
-    			else { return "not streaming"; }
-		}
-	});
-	}
-
-
-
 	$scope.users = [
-	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/goldglove'}
+	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/joshog'}
 	// {'name': 'adreN (Liquid)', 'link':'http://www.twitch.tv/adren_tv'},
 	// {'name': 'AdreN (HellRaisers)', 'link':'http://www.twitch.tv/adrentot'},
 	// {'name': 'Allu (NiP)', 'link':'http://www.twitch.tv/allub'},
@@ -158,4 +131,39 @@ app.controller('usersController', function($scope,$http){
 	];
 
 
+		
+		for(var i = 0; i < $scope.users.length; ++i){			
+			var link = $scope.users[i].link.split('/').pop(-1)
+			var user = $scope.users[i];		
+			var test = 1;	
+			var isStreaming = false;		
+
+		$.ajax({
+    		url: "https://api.twitch.tv/kraken/streams/" + link,
+ 
+    		// The name of the callback parameter, as specified by the YQL service
+		    jsonp: "callback",
+ 
+    		// Tell jQuery we're expecting JSONP
+    		dataType: "jsonp",
+ 
+ 
+    // Work with the response
+    		success: function( response ) {
+    			console.log(link);    			
+    			if(response.stream){    				 
+    				console.log('streaming');
+    				isStreaming = true;
+    			}
+    			else {
+    				isStreaming = false;
+    			}
+    		
+			}
+		});
+
+		//$scope.users[i].isStreaming = true;		
+		
+	};
+	
 });
