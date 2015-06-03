@@ -1,15 +1,38 @@
 body {
-	background-color: rgb(246,246,246) ;
+	background-color: rgb(248,248,248) ;
+	font-family: 'Lato', sans-serif;
 }
 
 .center {
 	text-align: center;
 }
 
-.user {
-	margin-left: 5%;
+.title h1 {
+	font-size: 48px;
+	font-weight: 900;
 }
 
 .streamer {
 	margin-right: 5%;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.Streaming a {
+	color: rgba(000,000,000,0.54);
+}
+
+.notStreaming a {
+	color: rgba(000,000,000,0.28);
+}
+
+
+.card {
+	background-color: white;
+	border-radius: 4px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 50%;
+	margin: auto;
+	margin-bottom: 8px;
 }
