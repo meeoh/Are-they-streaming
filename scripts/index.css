@@ -79,3 +79,7 @@ body {
   display: table;
   height: 100%;
 }
+
+marquee {
+	font-size: 14px;
+}

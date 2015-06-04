@@ -2,6 +2,8 @@ var app = angular.module('isStreaming',[]);
 
 app.controller('usersController', function($scope,$http,$window){
 
+
+
 	console.log('gurmukhsinghlall <3 kevin hemple');
     $scope.test = function(link){
         window.location = link;
@@ -178,6 +180,8 @@ app.controller('usersController', function($scope,$http,$window){
     			//	console.log(response.stream);  				 
     			//	console.log('streaming');
     				user.isStreaming = true;
+                    user.title = response.stream.channel.status
+                    console.log(response.stream.channel.status);
     				$scope.$apply();
     			}
     			else {
