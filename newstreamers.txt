@@ -135,6 +135,7 @@
 {'name': 'streb0r (Method)', 'link':'http://www.twitch.tv/streb0r'},
 {'name': 'strux1 (PENTA)', 'link':'http://www.twitch.tv/strux1'},
 {'name': 'stunna (C9)', 'link':'http://www.twitch.tv/stunna_'},
+{'name': 'summit1g', 'link':'http://www.twitch.tv/summit1g'},
 {'name': 'Swag (C9)', 'link':'http://www.twitch.tv/swagcs'},
 {'name': 'Tarik (CLG)', 'link':'http://www.twitch.tv/tarik_tv'},
 {'name': 'TaZ (VP)', 'link':'http://www.twitch.tv/g5taz'},
