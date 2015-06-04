@@ -1,8 +1,11 @@
 var app = angular.module('isStreaming',[]);
 
-app.controller('usersController', function($scope,$http){
+app.controller('usersController', function($scope,$http,$window){
 
 	console.log('gurmukhsinghlall <3 kevin hemple');
+    $scope.test = function(link){
+        window.location = link;
+    }
 	$scope.users = [
 	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/abecsgo'},
 {'name': 'adreN (Liquid)', 'link':'http://www.twitch.tv/adren_tv'},

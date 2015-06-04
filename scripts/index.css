@@ -17,6 +17,9 @@ body {
 	margin-right: 5%;
 	font-size: 18px;
 	font-weight: 700;
+	margin-top: 8px;
+	text-align:left;
+	margin-left: 8px;
 }
 
 .Streaming a {
@@ -36,12 +39,43 @@ body {
 	width: 50%;
 	margin: auto;
 	margin-bottom: 8px;
+	height: 64px;
+	width: 384px;
+}
+
+.card:hover {
+	background-color: rgba(255,114,0,0.05);
 }
 
 .circle {
 	border-radius: 50%;
-	width: 20px;
-	height: 20px; 
-	background-color: blue;
+	width: 16px;
+	height: 16px; 
+	margin-top: 10px;
 	/* width and height can be anything, as long as they're equal */
+}
+
+.circle-blue {
+	background-color: #ff7200;
+}
+
+.circle-nonstreaming {
+	background-color: rgba(255,114,0,.2);
+}
+
+.circle-wrap {
+	margin-left: 0px;
+}
+
+.username {
+	text-transform: uppercase;
+}
+.Streaming a{
+	text-transform: uppercase ;
+	text-decoration: none ;
+}
+
+.vertical-align-parent {
+  display: table;
+  height: 100%;
 }
