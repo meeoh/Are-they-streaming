@@ -94,6 +94,7 @@ app.controller('usersController', function($scope,$http,$window){
 {'name': 'miKnutty', 'link':'http://www.twitch.tv/miknutty'},
 {'name': 'm0E', 'link':'http://www.twitch.tv/m0e_tv'},
 {'name': 'mouz (gamers2)', 'link':'http://www.twitch.tv/mouzzzz'},
+{'name': 'NAF', 'link':'twitch.tv/nafcs'},
 {'name': 'Natawhee', 'link':'http://www.twitch.tv/natawhee'},
 {'name': 'NBK (EnVyUs)', 'link':'http://www.twitch.tv/nbk'},
 {'name': 'Neo (VP)', 'link':'http://www.twitch.tv/neog5'},
@@ -152,7 +153,7 @@ app.controller('usersController', function($scope,$http,$window){
 {'name': 'Xizt (NiP)', 'link':'http://www.twitch.tv/officialxizt'},
 {'name': 'Yaman (VOX)', 'link':'http://www.twitch.tv/yamanlol'},
 {'name': 'Zeus (NaVi)', 'link':'http://www.twitch.tv/zeus'},
-{'name': 'zonixx', 'link':'http://www.twitch.tv/zonixxcs'}
+{'name': 'zonixx', 'link':'http://www.twitch.tv/zonixxcs'},
 	];
 
 
