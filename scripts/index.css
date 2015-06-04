@@ -10,6 +10,7 @@ body {
 .title h1 {
 	font-size: 48px;
 	font-weight: 900;
+	margin: 48px 0;
 }
 
 .streamer {
