@@ -11,10 +11,6 @@
 	<script  src="scripts/index.js"></script>	
 	<link href='http://fonts.googleapis.com/css?family=Lato:700,900' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="icon.png">
-	<script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
-
-
-
 
 	<script>
   		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -44,8 +40,8 @@
 		
 			
 			<div class="user" ng-controller='usersController'>
-					<div ng-repeat="user in users | orderBy: ['isStreaming','name']" class="card" ng-click='test(user.link)' >				
-						<span class="streamer col-md-9 col-sm-9" ng-class="{'Streaming': user.isStreaming, 'notStreaming':!user.isStreaming}"><a class='username' href={{user.link}}>{{user.name}}<br><marquee ng-show='user.isStreaming' behavior="scroll" direction="left">{{user.title}}</marquee></a></span>
+					<div ng-repeat="user in users | orderBy: ['isStreaming','-viewers','name']" class="card" ng-click='test(user.link)' >				
+						<span class="streamer col-md-9 col-sm-9" ng-class="{'Streaming': user.isStreaming, 'notStreaming':!user.isStreaming}"><a class='username' href={{user.link}}>{{user.name}}<br><marquee ng-show='user.isStreaming' behavior="scroll" direction="left">{{user.title}} - {{user.viewers}} viewers</marquee></a></span>
 	<!-- 					<span ng-show="user.isStreaming" ><a href={{user.link}}><button type="submit" class='btn btn-success'>STREAMING</button></a></span>
 						<span ng-show="!user.isStreaming" ><button class='btn btn-danger' disabled>NOT STREAMING :(</button></span> -->
 						<div class='circle-wrap col-md-2 col-sm-2'>
