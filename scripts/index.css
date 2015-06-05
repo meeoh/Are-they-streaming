@@ -40,7 +40,7 @@ body {
 	margin: auto;
 	margin-bottom: 8px;
 	height: 64px;
-	width: 384px;
+	width: 512px;
 }
 
 .card:hover {
@@ -52,6 +52,7 @@ body {
 	width: 16px;
 	height: 16px; 
 	margin-top: 10px;
+	margin-left: 20px;
 	/* width and height can be anything, as long as they're equal */
 }
 

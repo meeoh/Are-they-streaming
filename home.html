@@ -47,8 +47,6 @@
 
 					<div ng-repeat="user in users | orderBy: ['isStreaming','-viewers','name'] | filter:search" class="card" ng-click='test(user.link)' >				
 						<span class="streamer col-md-9 col-sm-9" ng-class="{'Streaming': user.isStreaming, 'notStreaming':!user.isStreaming}"><a class='username' href={{user.link}}>{{user.name}}<br><marquee ng-show='user.isStreaming' behavior="scroll" direction="left">{{user.title}} - {{user.viewers}} viewers</marquee></a></span>
-	<!-- 					<span ng-show="user.isStreaming" ><a href={{user.link}}><button type="submit" class='btn btn-success'>STREAMING</button></a></span>
-						<span ng-show="!user.isStreaming" ><button class='btn btn-danger' disabled>NOT STREAMING :(</button></span> -->
 						<div class='circle-wrap col-md-2 col-sm-2'>
 						<div class="circle" ng-class="{'circle-blue':user.isStreaming, 'circle-nonstreaming':!user.isStreaming}"></div>
 						</div>
