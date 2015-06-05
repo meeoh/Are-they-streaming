@@ -40,7 +40,12 @@
 		
 			
 			<div class="user" ng-controller='usersController'>
-					<div ng-repeat="user in users | orderBy: ['isStreaming','-viewers','name']" class="card" ng-click='test(user.link)' >				
+				<div class="searchBar form-group">
+					<input class='form-control' type="search" ng-model="search" placeholder="Search... (e.g Shroud/C9)">
+				</div>
+			
+
+					<div ng-repeat="user in users | orderBy: ['isStreaming','-viewers','name'] | filter:search" class="card" ng-click='test(user.link)' >				
 						<span class="streamer col-md-9 col-sm-9" ng-class="{'Streaming': user.isStreaming, 'notStreaming':!user.isStreaming}"><a class='username' href={{user.link}}>{{user.name}}<br><marquee ng-show='user.isStreaming' behavior="scroll" direction="left">{{user.title}} - {{user.viewers}} viewers</marquee></a></span>
 	<!-- 					<span ng-show="user.isStreaming" ><a href={{user.link}}><button type="submit" class='btn btn-success'>STREAMING</button></a></span>
 						<span ng-show="!user.isStreaming" ><button class='btn btn-danger' disabled>NOT STREAMING :(</button></span> -->
