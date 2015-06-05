@@ -2,7 +2,38 @@ var app = angular.module('isStreaming',[]);
 
 app.controller('usersController', function($scope,$http,$window){
 
+    var streamingNow = [];
 
+    // var checkifstreaming = function(link){
+
+    //     function(user){
+
+    //     var link = user.link.split('/').pop(-1)
+
+    //     $.ajax({
+    //         url: "https://api.twitch.tv/kraken/streams/" + link,
+    //         // The name of the callback parameter, as specified by the YQL service
+    //         jsonp: "callback",
+    //         // Tell jQuery we're expecting JSONP
+    //         dataType: "jsonp",
+    // // Work with the response
+    //         success: function( response ) {            
+                
+    //         }
+    //     });
+    // };
+
+
+    // };
+
+    // setInterval(function(){
+    //      for(var i = 0; i < streamingNow.length; ++i){
+    //         console.log(streamingNow[i]);
+    //         if(!checkifstreaming(streamingNow[i].link)){
+    //             streamingNow[i].isStreaming = false;
+    //         }
+    //      }
+    // }, 20000)
 
 	console.log('gurmukhsinghlall <3 kevin hemple');
     $scope.test = function(link){
@@ -183,9 +214,10 @@ app.controller('usersController', function($scope,$http,$window){
     			//	console.log(response.stream);  				 
     			//	console.log('streaming');
     				user.viewers = response.stream.viewers;
-    				console.log(user.viewers);
+    				//console.log(user.viewers);
     				user.isStreaming = true;
                     user.title = response.stream.channel.status
+                    streamingNow.push(user);
                     //console.log(response.stream.channel.status);
     			}
     			else {
