@@ -27,7 +27,7 @@ for line in entry:
 	name = line.find('a').get_text()
 	team = line.find(class_='sprite-text').get_text()
 	twitch = line.find(class_='external')['href']
-	write = "{\'name\':" + name + ' (' + team + ')' + ", 'link':" + twitch + '},'
+	write = "{\'name\':\'" + name + ' (' + team + ')' + "\', 'link':\'" + twitch + "\'},"
 	#writeFile.write(write)
 	print write
 
@@ -53,6 +53,6 @@ for line in entry:
 	name = line.find('a').get_text()
 	team = line.find(class_='sprite-text').get_text()
 	twitch = line.find(class_='external')['href']
-	write = "{\'name\':" + name + ' (' + team + ')' + ", 'link':" + twitch + '},'
+	write = "{\'name\':\'" + name + ' (' + team + ')' + "\', 'link':\'" + twitch + "\'},"
 	print write
 	#writeFile.write(write)
