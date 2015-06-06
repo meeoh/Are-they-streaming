@@ -2,6 +2,55 @@ var app = angular.module('isStreaming',[]);
 
 app.controller('usersController', function($scope,$http,$window){
 
+	$scope.game = 'Counter Strike:Global Offensive';
+	//$scope.game = 'League Of Legends';
+	var leagueLoaded = false;
+	var csLoaded = true;
+	$scope.switchGame = function(newGame){
+		if($scope.game != newGame){
+			$scope.game = newGame;	
+			$scope.search = '';
+
+			//If league has already been loaded, dont load again
+			if($scope.game == 'League Of Legends' && leagueLoaded){
+				return;
+			}
+			//If they choose csgo, dont need to load anything
+			if($scope.game == 'Counter Strike:Global Offensive'){
+				return;
+			}
+			/*
+			if($scope.game =='DOTA' && dotaLoaded){
+				return;
+			}
+			*/
+
+			//If they chose League, set it to loaded
+			if($scope.game == 'League Of Legends'){
+				leagueLoaded = true;
+			}
+			/*
+			if($scope.game == 'DOTA'){
+				dotaLoaded = true;
+			}
+			*/
+
+			//if($scope.game == 'League Of Legends'){
+			//Load csgo
+				for(var i = 0; i < $scope.leagueUsers.length; ++i){		
+					apiCall($scope.leagueUsers[i]);	
+				}
+			//}
+
+			// 	if($scope.game == 'DOTA'){
+			// Load DOTA
+			// 	for(var i = 0; i < $scope.dotaUsers.length; ++i){		
+			// 		apiCall($scope.dotaUsers[i]);	
+			// 	}
+			// }
+		}
+	};
+
     var streamingNow = [];
 
     // var checkifstreaming = function(link){
@@ -35,12 +84,11 @@ app.controller('usersController', function($scope,$http,$window){
     //      }
     // }, 20000)
 
-	console.log('gurmukhsinghlall <3 kevin hemple');
     $scope.test = function(link){
         window.location = link;
     }
 	$scope.csgoUsers = [
-	{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/abecsgo'},
+			{'name': 'abE (Affinity)', 'link':'http://www.twitch.tv/abecsgo'},
 {'name': 'adreN (Liquid)', 'link':'http://www.twitch.tv/adren_tv'},
 {'name': 'AdreN (HellRaisers)', 'link':'http://www.twitch.tv/adrentot'},
 {'name': 'Allu (NiP)', 'link':'http://www.twitch.tv/allub'},
@@ -187,11 +235,10 @@ app.controller('usersController', function($scope,$http,$window){
 {'name': 'Xizt (NiP)', 'link':'http://www.twitch.tv/officialxizt'},
 {'name': 'Yaman (VOX)', 'link':'http://www.twitch.tv/yamanlol'},
 {'name': 'Zeus (NaVi)', 'link':'http://www.twitch.tv/zeus'},
-{'name': 'zonixx', 'link':'http://www.twitch.tv/zonixxcs'},
+{'name': 'zonixx', 'link':'http://www.twitch.tv/zonixxcs'}
 	];
 
     $scope.leagueUsers = [
-
         {'name':'Accelerator (Furious Gaming)', 'link':'http://www.twitch.tv/Acceleratorgg'},
 {'name':'Naryt (Isurus Gaming)', 'link':'http://www.twitch.tv/exlynn'},
 {'name':'Tomex (XIS eSports Club)', 'link':'http://www.twitch.tv/eltomex'},
@@ -302,7 +349,6 @@ app.controller('usersController', function($scope,$http,$window){
 {'name':'Maple (yoe Flash Wolves)', 'link':'http://www.twitch.tv/ttopson4'},
 {'name':'Naz (ahq e-Sports Club)', 'link':'http://www.twitch.tv/missyou501/'},
 {'name':'NwSunday (Team Ozone Taiwan)', 'link':'http://www.twitch.tv/a931506066'},
-
 
     ];
 

@@ -95,3 +95,11 @@ marquee {
 .searchBar input {
 	width: 100%;
 }
+
+.active {
+	color: red;
+}
+
+.counterStrikeTitle, .leagueTitle {
+	cursor: pointer;
+}
