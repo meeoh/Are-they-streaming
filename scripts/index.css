@@ -56,12 +56,20 @@ body {
 	/* width and height can be anything, as long as they're equal */
 }
 
-.circle-blue {
+.circle-orange {
 	background-color: #ff7200;
 }
 
-.circle-nonstreaming {
+.circle-orange-nonstreaming {
 	background-color: rgba(255,114,0,.2);
+}
+
+.circle-blue {
+	background-color: rgb(30,112,247);
+}
+
+.circle-blue-nonstreaming {
+	background-color: rgba(30,112,247,.2);
 }
 
 .circle-wrap {
