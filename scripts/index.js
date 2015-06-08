@@ -4,11 +4,18 @@ app.controller('usersController', function($scope,$http,$window){
 
 	$scope.game = 'Counter Strike:Global Offensive';
 	//$scope.game = 'League Of Legends';
+	$scope.allGames = ['League Of Legends'];
+
 	var leagueLoaded = false;
 	var csLoaded = true;
 	$scope.switchGame = function(newGame){
+
 		if($scope.game != newGame){
+
+			$scope.allGames.push($scope.game);
+			$scope.allGames.splice($scope.allGames.indexOf(newGame),1);
 			$scope.game = newGame;	
+			
 			$scope.search = '';
 
 			//If league has already been loaded, dont load again
