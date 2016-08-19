@@ -1,120 +1,120 @@
 body {
-	background-color: rgb(248,248,248) ;
-	font-family: 'Lato', sans-serif;
+    background-color: rgb(248, 248, 248);
+    font-family: 'Lato', sans-serif;
 }
 
 .center {
-	text-align: center;
+    text-align: center;
 }
 
 .title h1 {
-	font-size: 48px;
-	font-weight: 900;
-	margin: 48px 0;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 48px 0;
 }
 
 .streamer {
-	margin-right: 5%;
-	font-size: 18px;
-	font-weight: 700;
-	margin-top: 8px;
-	text-align:left;
-	margin-left: 8px;
+    margin-right: 5%;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 8px;
+    text-align: left;
+    margin-left: 8px;
 }
 
 .Streaming a {
-	color: rgba(000,000,000,0.54);
+    color: rgba(000, 000, 000, 0.54);
 }
 
 .notStreaming a {
-	color: rgba(000,000,000,0.28);
+    color: rgba(000, 000, 000, 0.28);
 }
 
-
 .card {
-	background-color: white;
-	border-radius: 4px;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	margin: auto;
-	margin-bottom: 8px;
-	height: 64px;
-	width: 512px;
+    background-color: white;
+    border-radius: 4px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: auto;
+    margin-bottom: 8px;
+    height: 64px;
+    width: 512px;
 }
 
 .card:hover {
-	background-color: rgba(255,114,0,0.05);
+    background-color: rgba(255, 114, 0, 0.05);
 }
 
 .circle {
-	border-radius: 50%;
-	width: 16px;
-	height: 16px; 
-	margin-top: 10px;
-	margin-left: 20px;
-	/* width and height can be anything, as long as they're equal */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: 10px;
+    margin-left: 20px;
+    /* width and height can be anything, as long as they're equal */
 }
 
 .circle-orange {
-	background-color: #ff7200;
+    background-color: #ff7200;
 }
 
 .circle-orange-nonstreaming {
-	background-color: rgba(255,114,0,.2);
+    background-color: rgba(255, 114, 0, .2);
 }
 
 .circle-blue {
-	background-color: rgb(30,112,247);
+    background-color: rgb(30, 112, 247);
 }
 
 .circle-blue-nonstreaming {
-	background-color: rgba(30,112,247,.2);
+    background-color: rgba(30, 112, 247, .2);
 }
 
 .circle-wrap {
-	margin-left: 0px;
+    margin-left: 0px;
 }
 
 .username {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
-.Streaming a{
-	text-transform: uppercase ;
-	text-decoration: none ;
+
+.Streaming a {
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .vertical-align-parent {
-  display: table;
-  height: 100%;
+    display: table;
+    height: 100%;
 }
 
 marquee {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .searchBar {
-	font-family: 'Lato', sans-serif;
-	width: 384px;
-	margin: auto;
-	margin-bottom: 50px;
+    font-family: 'Lato', sans-serif;
+    width: 384px;
+    margin: auto;
+    margin-bottom: 50px;
 }
 
 .searchBar input {
-	width: 100%;
+    width: 100%;
 }
 
 .active {
-	color: red;
+    color: red;
 }
 
 .titles {
-	cursor: pointer;
-	margin-top: 20px;
-	color: rgba(000,000,000,.54);
-	font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: rgba(000, 000, 000, .54);
+    font-size: 16px;
 }
 
 .games {
-	width: 512px;
-	margin:auto;	
+    width: 512px;
+    margin: auto;
 }
