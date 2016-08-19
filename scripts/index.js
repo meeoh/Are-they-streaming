@@ -91,7 +91,7 @@ app.controller('usersController', function($scope,$http,$window){
     //      }
     // }, 20000)
 
-    $scope.test = function(link){
+    $scope.clickStreamer = function(link){
         window.location = link;
     }
 	$scope.csgoUsers = [
