@@ -53,13 +53,13 @@
                     {{game}}
                 </div>
                 <br>
-                <div ng-repeat="user in csgoUsers | orderBy: ['isStreaming','-viewers','name'] | filter:search" class="card" ng-click='test(user.link)' ng-if="game == 'Counter Strike:Global Offensive'">
+                <div ng-repeat="user in csgoUsers | orderBy: ['isStreaming','-viewers','name'] | filter:search" class="card" ng-click='clickStreamer(user.link)' ng-if="game == 'Counter Strike:Global Offensive'">
                     <span class="streamer col-md-9 col-xs-9" ng-class="{'Streaming': user.isStreaming, 'notStreaming':!user.isStreaming}"><a class='username' href={{user.link}}>{{user.name}}<br><marquee ng-show='user.isStreaming' behavior="scroll" direction="left">{{user.title}} - {{user.viewers}} viewers</marquee></a></span>
                     <div class='circle-wrap col-md-2 col-xs-2'>
                         <div class="circle" ng-class="{'circle-orange':user.isStreaming, 'circle-orange-nonstreaming':!user.isStreaming}"></div>
                     </div>
                 </div>
-                <div ng-repeat="user in leagueUsers | orderBy: ['isStreaming','-viewers','name'] | filter:search" class="card" ng-click='test(user.link)' ng-if="game == 'League Of Legends'">
+                <div ng-repeat="user in leagueUsers | orderBy: ['isStreaming','-viewers','name'] | filter:search" class="card" ng-click='clickStreamer(user.link)' ng-if="game == 'League Of Legends'">
                     <span class="streamer col-md-9 col-xs-9" ng-class="{'Streaming': user.isStreaming, 'notStreaming':!user.isStreaming}"><a class='username' href={{user.link}}>{{user.name}}<br><marquee ng-show='user.isStreaming' behavior="scroll" direction="left">{{user.title}} - {{user.viewers}} viewers</marquee></a></span>
                     <div class='circle-wrap col-md-2 col-xs-2'>
                         <div class="circle" ng-class="{'circle-blue':user.isStreaming, 'circle-blue-nonstreaming':!user.isStreaming}"></div>
