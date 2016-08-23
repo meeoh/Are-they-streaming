@@ -348,7 +348,7 @@ app.controller('usersController', function($scope, $http, $window) {
                 //console.log(response.stream.viewers);
 
                 if (response.stream) {
-                    //	console.log(response.stream);  				 
+                    	console.log(response.stream);  				 
                     //	console.log('streaming');
                     user.viewers = response.stream.viewers;
                     //console.log(user.viewers);
