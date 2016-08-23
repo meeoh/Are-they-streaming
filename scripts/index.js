@@ -58,7 +58,6 @@ app.controller('usersController', function($scope, $http, $window) {
         }
     };
 
-    var streamingNow = [];
 
     $scope.clickStreamer = function(link) {
         window.location = link;
@@ -355,7 +354,6 @@ app.controller('usersController', function($scope, $http, $window) {
                     //console.log(user.viewers);
                     user.isStreaming = true;
                     user.title = response.stream.channel.status
-                    streamingNow.push(user);
                     //console.log(response.stream.channel.status);
                 } else {
                     user.viewers = 0;
