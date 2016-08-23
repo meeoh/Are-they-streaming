@@ -344,11 +344,8 @@ app.controller('usersController', function($scope, $http, $window) {
 
             // Work with the response
             success: function(response) {
-                if ($scope.game == "League Of Legends") {
-                    console.log(response);
-                }
                 //console.log(response.stream.viewers);
-
+                console.log(response._links.self);
                 if (response.stream) {
                     //	console.log(response.stream);  				 
                     //	console.log('streaming');
