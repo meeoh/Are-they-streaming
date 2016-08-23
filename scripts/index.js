@@ -345,6 +345,9 @@ app.controller('usersController', function($scope, $http, $window) {
             // Work with the response
             success: function(response) {
                 //console.log(response.stream.viewers);
+                if (response._links.self == "https://api.twitch.tv/kraken/streams/krepo") {
+                	console.log(repsonse);
+                }
                 console.log(response._links.self);
                 if (response.stream) {
                     //	console.log(response.stream);  				 
