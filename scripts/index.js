@@ -344,7 +344,9 @@ app.controller('usersController', function($scope, $http, $window) {
 
             // Work with the response
             success: function(response) {
-                console.log(response);    	
+                if ($scope.game == "League of Legends") {
+                    console.log(response);
+                }
                 //console.log(response.stream.viewers);
 
                 if (response.stream) {
@@ -354,7 +356,7 @@ app.controller('usersController', function($scope, $http, $window) {
                     //console.log(user.viewers);
                     user.isStreaming = true;
                     user.title = response.stream.channel.status
-                    //console.log(response.stream.channel.status);
+                        //console.log(response.stream.channel.status);
                 } else {
                     user.viewers = 0;
                     isStreaming = false;
