@@ -344,11 +344,11 @@ app.controller('usersController', function($scope, $http, $window) {
 
             // Work with the response
             success: function(response) {
-                //console.log(response);    	
+                console.log(response);    	
                 //console.log(response.stream.viewers);
 
                 if (response.stream) {
-                    	console.log(response.stream);  				 
+                    //	console.log(response.stream);  				 
                     //	console.log('streaming');
                     user.viewers = response.stream.viewers;
                     //console.log(user.viewers);
