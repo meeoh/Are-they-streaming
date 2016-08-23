@@ -367,7 +367,7 @@ app.controller('usersController', function($scope, $http, $window) {
     };
 
 
-
+    //autoload csgo users
     for (var i = 0; i < $scope.csgoUsers.length; ++i) {
         apiCall($scope.csgoUsers[i]);
     };
